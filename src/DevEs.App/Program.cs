@@ -1,5 +1,7 @@
 using DevEs.App.Data;
+using DevEs.Business.Interface;
 using DevEs.Data.Context;
+using DevEs.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +14,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddDbContext<MeuDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<MeuDbContext>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<IFornecedorRepository, FornecedorRepository>();
+builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
