@@ -1,4 +1,4 @@
-﻿using AppMvcCompleta.Models;
+﻿using DevEs.Business.Models;
 using AutoMapper;
 using DevEs.App.ViewModels;
 

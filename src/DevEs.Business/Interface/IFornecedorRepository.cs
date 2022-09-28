@@ -1,4 +1,4 @@
-﻿using AppMvcCompleta.Models;
+﻿using DevEs.Business.Models;
 
 namespace DevEs.Business.Interface
 {

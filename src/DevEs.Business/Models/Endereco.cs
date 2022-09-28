@@ -1,4 +1,4 @@
-﻿namespace AppMvcCompleta.Models
+﻿namespace DevEs.Business.Models
 {
     public class Endereco : EntityBase
     {

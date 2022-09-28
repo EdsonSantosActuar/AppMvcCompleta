@@ -1,4 +1,4 @@
-﻿using AppMvcCompleta.Models;
+﻿using DevEs.Business.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DevEs.Data.Context

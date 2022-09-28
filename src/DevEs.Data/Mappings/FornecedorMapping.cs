@@ -1,4 +1,4 @@
-﻿using AppMvcCompleta.Models;
+﻿using DevEs.Business.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
