@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDbContext<MeuDbContext>(options =>
     options.UseSqlServer(connectionString));
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddScoped<MeuDbContext>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<IFornecedorRepository, FornecedorRepository>();

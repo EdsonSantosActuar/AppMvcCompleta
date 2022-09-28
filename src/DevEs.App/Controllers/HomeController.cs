@@ -1,4 +1,4 @@
-﻿using DevEs.App.Models;
+﻿using DevEs.App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
