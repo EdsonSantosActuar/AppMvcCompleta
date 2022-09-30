@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevEs.App.ViewModels
 {
@@ -21,7 +22,9 @@ namespace DevEs.App.ViewModels
         public string Descricao { get; set; }
 
         public string Imagem { get; set; }
-        //public IFormFile ImagemUpload { get; set; }
+
+        [NotMapped]
+        public IFormFile ImagemUpload { get; set; }
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório!")]
         public decimal Valor { get; set; }
@@ -33,5 +36,7 @@ namespace DevEs.App.ViewModels
         public bool Ativo { get; set; }
 
         public FornecedorViewModel Fornecedor { get; set; }
+
+        public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
     }
 }
