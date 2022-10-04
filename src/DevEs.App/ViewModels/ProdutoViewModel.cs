@@ -24,6 +24,7 @@ namespace DevEs.App.ViewModels
         public string Imagem { get; set; }
 
         [NotMapped]
+        [Display(Name = "Imagem")]
         public IFormFile ImagemUpload { get; set; }
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório!")]

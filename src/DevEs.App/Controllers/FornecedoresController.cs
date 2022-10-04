@@ -19,7 +19,7 @@ namespace DevEs.App.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()));
+            return View(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterFornecedoresEnderecos()));
         }
 
         public async Task<IActionResult> Details(Guid id)

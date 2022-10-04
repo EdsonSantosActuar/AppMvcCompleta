@@ -15,6 +15,13 @@ namespace DevEs.Data.Repository
                 .FirstOrDefaultAsync(f => f.Id == id);
         }
 
+        public async Task<IEnumerable<Fornecedor>> ObterFornecedoresEnderecos()
+        {
+            return await Db.Fornecedores.AsNoTracking()
+                .Include(e => e.Endereco)
+                .ToListAsync();
+        }
+
         public async Task<Fornecedor> ObterFornecedorProdutosEndereco(Guid id)
         {
             return await Db.Fornecedores.AsNoTracking()
