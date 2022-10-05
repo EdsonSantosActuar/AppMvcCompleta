@@ -7,6 +7,8 @@ namespace DevEs.Data.Context
     {
         public MeuDbContext(DbContextOptions options) : base(options)
         {
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
         public DbSet<Endereco> Enderecos { get; set; }
